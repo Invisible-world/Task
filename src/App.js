@@ -42,7 +42,7 @@ import './App.css';
   } 
  });
 let data = finalData.filter(_finalData=> _finalData!==undefined)
-console.log(data);
+// console.log(data);
 
 return (
     <div className="App">

@@ -1,8 +1,9 @@
 import React from 'react'
+import './Setting.css'
 
 const Setting = () => {
     return (
-        <div>
+        <div className='style'>
            Setting
         </div>
     )

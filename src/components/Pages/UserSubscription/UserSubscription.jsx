@@ -1,8 +1,9 @@
 import React from 'react'
+import './UserSubscription.css'
 
 const UserSubscription = () => {
     return (
-        <div>
+        <div className='style'>
             UserSubscription
         </div>
     )

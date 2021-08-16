@@ -27,32 +27,32 @@ import './User.css'
   }
   return(
         <div>
-            <div class="container">
-            <input type="text" 
-            class="form__input"  
+          <div className="container">
+          <input type="text" 
+            className="form__input"  
             placeholder="Filter Search..." 
             required="" 
             onChange={(e)=>setSearchTerm(e.target.value)}
             />
-            <h2>Users<small>Data</small></h2>
-                <ul class="responsive-table">
-                  <li class="table-header">
-                    <div class="col col-1"  >
-                      <button type="button" onClick={() => requestSort('id')}> Id</button>
-                      </div>
-                    <div class="col col-2">
-                    <button type="button" onClick={() => requestSort('first_name')}> User Name</button>
-                    </div>
-                    <div class="col col-3">
-                    <button type="button" onClick={() => requestSort('email')} >Email</button>
-                    </div>
-                    <div class="col col-5">
-                    <button type="button" onClick={() => requestSort('package_subs')}>Package</button>
-                      </div>
-                    <div class="col col-4">
-                    <button type="button" onClick={() => requestSort('expires_on')}>Expires on</button>
-                    </div>
-                  </li>
+          <h2>Users<small>Data</small></h2>
+          <ul className="responsive-table">
+          <li className="table-header">
+          <div className="col col-1"  >
+          <button type="button" onClick={() => requestSort('id')}> Id</button>
+            </div>
+            <div className="col col-2">
+            <button type="button" onClick={() => requestSort('first_name')}> User Name</button>
+            </div>
+            <div className="col col-3">
+            <button type="button" onClick={() => requestSort('email')} >Email</button>
+            </div>
+            <div className="col col-5">
+            <button type="button" onClick={() => requestSort('package_subs')}>Package</button>
+            </div>
+            <div className="col col-4">
+            <button type="button" onClick={() => requestSort('expires_on')}>Expires on</button>
+            </div>
+            </li>
             {sortedData && sortedData.length > 0 ? sortedData.filter(val=>{
               if(searchTerm===''){
                 return val;
@@ -65,12 +65,12 @@ import './User.css'
                   return val;
                 }
             }).map(dat=>(
-                <li class="table-row">
-                    <div class="col col-1" data-label=" Id">{dat.id}</div>
-                    <div class="col col-2" data-label="User Name">{dat.first_name}</div>
-                    <div class="col col-3" data-label="Email">{dat.email}</div>
-                    <div class="col col-5" data-label="Country">{dat.package_subs}</div>
-                    <div class="col col-4" data-label="Country">{dat.expires_on}</div>
+                <li className="table-row">
+                    <div className="col col-1" data-label=" Id">{dat.id}</div>
+                    <div className="col col-2" data-label="User Name">{dat.first_name}</div>
+                    <div className="col col-3" data-label="Email">{dat.email}</div>
+                    <div className="col col-5" data-label="Country">{dat.package_subs}</div>
+                    <div className="col col-4" data-label="Country">{dat.expires_on}</div>
                   </li>
                   ))
             :"Loading"
