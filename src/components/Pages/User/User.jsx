@@ -5,7 +5,7 @@ import './User.css'
    const [searchTerm, setSearchTerm] = useState('')
    const [sortConfig, setSortConfig] = useState(null);
    let sortedData= [...data]
-  console.log(sortedData)
+  // console.log(sortedData)
 
   if (sortConfig !== null) {
     sortedData.sort((a, b) => {
@@ -30,7 +30,7 @@ import './User.css'
           <div className="container">
           <input type="text" 
             className="form__input"  
-            placeholder="Filter Search..." 
+            placeholder="Search..." 
             required="" 
             onChange={(e)=>setSearchTerm(e.target.value)}
             />
@@ -65,7 +65,7 @@ import './User.css'
                   return val;
                 }
             }).map(dat=>(
-                <li className="table-row">
+                <li className="table-row" key={dat.id}>
                     <div className="col col-1" data-label=" Id">{dat.id}</div>
                     <div className="col col-2" data-label="User Name">{dat.first_name}</div>
                     <div className="col col-3" data-label="Email">{dat.email}</div>

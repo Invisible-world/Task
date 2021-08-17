@@ -19,10 +19,10 @@ import {
             <h2>John Wick.</h2>
             </header>
 	          <ul>
-             <li tabindex="0" className="icon-dashboard"><span><Link to='/' >Dashboard</Link></span></li>
-             <li tabindex="0" className="icon-users"><span><Link to='/user'>Users</Link></span></li>
-             <li tabindex="0" className="icon-customers"><span><Link to='/usersubscription'>Users Subscription</Link></span></li>
-             <li tabindex="0" className="icon-settings"><span><Link to='/setting'>Settings</Link></span></li>
+             <li  className="icon-dashboard"><span><Link to='/' >Dashboard</Link></span></li>
+             <li  className="icon-users"><span><Link to='/user'>Users</Link></span></li>
+             <li  className="icon-customers"><span><Link to='/usersubscription'>Users Subscription</Link></span></li>
+             <li  className="icon-settings"><span><Link to='/setting'>Settings</Link></span></li>
             </ul>
           </nav>
         <main>

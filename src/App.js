@@ -9,14 +9,25 @@ import './App.css';
   const [userSubs,setUserSubs] = useState([])
  
   const getUserData = async() => {
-    const res=await fetch('./assests/users.json')
+    try{
+      const res=await fetch('./assests/users.json')
     const data=await res.json()
     return setUser(data)
   }
+  catch(error){
+    console.error(error)
+  }
+    
+  }
   const getUserSubsData = async() => {
-    const res=await fetch('./assests/subscriptions.json')
+    try{
+      const res=await fetch('./assests/subscriptions.json')
     const data=await res.json()
     return setUserSubs(data)
+    }
+    catch(error){
+      console.error(error)
+    }
   }
   
   useEffect(() => {
@@ -40,7 +51,8 @@ import './App.css';
       user_id,
     };
   } 
- });
+
+});
 let data = finalData.filter(_finalData=> _finalData!==undefined)
 // console.log(data);
 
